@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro programa usando JavaScript</title>
+    <style>
+        body {
+            background-color: blue;
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprendendo JavaScript</h1>
+    <p>Vamos lá!</p>
+    <script>
+        var nome = window.prompt('Qual o seu nome?') // vai perguntar o nome.
+        window.alert('É um prazer te conhecer, ' + nome) // O sinal de + é para concatenação
+        var n1 = Number.parseInt(window.prompt('Digite o primeiro número:'))
+        var n2 = Number.parseInt(window.prompt('Digite o segundo número:'))
+        var s = n1 + n2
+        window.alert('A soma do primeiro número com segundo número é =', s)
+        // + ´(number + number) para adição
+        // + (string + string) para concatenação
+        //window prompt é um comando para receber strings.
+    </script>
+</body>
+</html>
