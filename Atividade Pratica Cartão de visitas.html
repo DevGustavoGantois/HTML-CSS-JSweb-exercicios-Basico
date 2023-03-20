@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão de Visitas</title>
+    <style>
+        body {
+        background-color: rgba(117, 65, 65, 0.719);
+        color: white;
+        text-align: center;
+        font: arial 20 pt;
+        }
+        nome#body{
+            margin-bottom: 20px;
+            text-align: center;
+            font: arial 200 pt;
+
+        }
+    </style>
+</head>
+<body>
+    <h1><i>Cartão de visitas</i></h1>
+    <h2>Nome:</h2>
+    <h3><li>Gustavo Gantois Caria</li></h3>
+    <h1><i>Minha Profissão:</i></h1>
+    <div id="nome">
+        CLIQUE AQUI PARA SABER MINHA PROFISSÃO.   
+    </div>
+    <img src="https://blog.sesisenai.org.br/wp-content/uploads/sites/23/2021/09/imagem-destaque-post-blog-cientista-de-dados-2.jpg" alt="Cientista de dados" width="400" height="400">
+    <script>
+        nome.addEventListener('click', clicar)
+        function clicar() {
+            var nome = window.document.querySelector('div#nome')
+            nome.innerText = '-> Cientista de Dados'
+            nome.style.color = 'black'
+        }
+    </script>     
+</body>
+</html>
