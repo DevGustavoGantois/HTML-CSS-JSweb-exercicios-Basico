@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somador e subtrator</title>
+    <style>
+        body{
+            align-items: center;
+            background-color: rgb(14, 212, 226);
+            color: rgb(0, 0, 0);  
+        }
+        input {
+            margin: 20px;
+            margin-top: 20px;
+            margin-left: 20px;
+            align-items: center;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somador e Subtrator de Números</h1>
+    <input type="number" name="txtn1" id="txtn1"> 
+
+
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" name="soma" id="soma" onclick="somar()"> SOMAR [+] 
+    <input type="button" name="subtraçao" id="subtraçao" onclick="subtrair()"> SUBTRAIR [-] 
+    <input type="button" name = "zerar" id="zerar" onclick="zerar()" > ZERAR [X]
+    <div id="res" ><h2>Resultado da conta = </h2>  
+
+    </div>
+    <script>
+        function somar() {
+        var tn1 = window.document.getElementById('txtn1')
+        var tn2 = window.document.getElementById('txtn2')
+        var res = window.document.getElementById('res')
+        var n1 = Number.parseInt(tn1.value)
+        var n2 = Number.parseInt(tn2.value)
+        var s = n1 + n2 
+        res.innerHTML = `O valor da soma de ${n1} + ${n2} = ${s}`
+        }
+
+        function subtrair() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number.parseInt(tn1.value)
+            var n2 = Number.parseInt(tn2.value)
+            var menos = n1 - n2
+            res.innerHTML = `O valor da subtração de ${n1} - ${n2} = ${menos}`
+        }
+
+        function zerar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = number.parseInt(tn1.value)
+            var n2 = number.parseInt (tn1.value)
+            var zerar = n1 = n2
+            res.innerHTML = `O valor da variável é 0. Tente novamente. `
+        }
+
+        
+    </script>
+</body>
+</html>
