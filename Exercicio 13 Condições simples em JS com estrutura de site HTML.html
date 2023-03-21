@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidadania</title>
+    <style>
+        body {
+            color: green;
+            background-color: yellow;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+    <h1>Cidadanias/Nacionalidades</h1>
+<body>
+<input type="text" id="nasci" placeholder="Digite sua nacionalidade">
+<input type="submit" onclick="nacionalidade()" value="enviar">
+    <p id="resp"></p>
+</body>
+<script>
+    const nacionalidade = () => {
+        let resposta = window.document.querySelector('#nasci').value
+        if (resposta !== 'brasileiro' && resposta !=  'gringo'){
+            window.document.querySelector('#resp').innerHTML = 'Erro, dados inválidos!'
+        }else
+            if(resposta == 'brasileiro'){
+                window.document.querySelector('#resp').innerHTML = `Esse usuário possui cidadania ${resposta}`
+            }else{
+                window.document.querySelector('#resp').innerHTML = `Esse usuário possui cidadania ${resposta}`
+            }
+    }
+</script>
+</html>
