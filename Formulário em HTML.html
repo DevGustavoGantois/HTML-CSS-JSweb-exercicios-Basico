@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rascunho Formulário Simples de um restaurante.</title>
+    <style>
+        body {
+            background-color: rgb(202, 202, 50);
+            color: rgb(141, 24, 24);
+        }
+    </style>
+</head>
+<h1>Formulário de uma Pizzaria.</h1>
+<body>
+    <form>
+        <label for="name">Nome:</label>
+        <input id="name" type="text" placeholder="Digite seu nome:" required/>
+        <!--ou-->
+        <br>
+        <label>
+            <br>
+        </label>
+        Email
+            <input type="email" required name="email" />
+        <label>
+                <br>
+        </label>
+            Senha
+            <input type="password" />
+        <label>
+        <br>
+        <h4>Condimentos</h4>
+        </label>
+            <input type="checkbox" name="condimentos" value="maionese" >
+            Maionese
+        <label>
+        </label>
+            <input type="checkbox" name="condimentos" value="mostarda"> Mostarda
+        <label>
+            <input type="checkbox" name="condimentos" value="Ketchup"> Ketchup 
+        </label>
+        <label>
+            <br>
+        </label>
+        <h4>Deixe a sua opnião sobre o nosso formulário,
+            aqui embaixo!
+        </h4>
+        <textarea name="Deixe sua opnião" id="" cols="50" rows="20"></textarea>
+        <label>
+            <input type="radio" name="Grande" value="G"> <b>G</b>
+        </label>
+        <label>
+            <input type="radio" name="Médio" value="M"> <b>M</b>
+        </label>
+        <label>
+            <input type="radio" name="Pequeno" value="P"> <b>P</b>
+        </label>
+        <label>
+            <input type="submit" name="Enviar" value="Enviar">
+        </label>
+        <label>
+            <input type="submit" name="Redefinir" value="Redefinir">
+        </label>
+        <label>
+            <input type="submit" name="Salvar" value="Salvar">
+        </label>
+        <label>
+            <select>
+                <optgroup>
+                <option value="Selecione">Selecione</option>
+                <option value="Calabresa">Calabresa</option>
+                <option value="Mussarela">Maionese</option>
+                <option value="Brigadeiro">Brigadeiro</option>
+                <option value="4 queijos">4 queijos</option>
+                <option value="Pizza de camarão">Pizza de camarão</option>
+                </optgroup>
+            </select>
+        </label>
+
+</body>
+</html>
