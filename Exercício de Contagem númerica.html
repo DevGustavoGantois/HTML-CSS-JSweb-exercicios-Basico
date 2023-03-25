@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem Númerica</title>
+    <style>
+        body{
+            background-color: rgba(8, 82, 218, 0.952);
+            color: rgb(0, 0, 0);
+            font: normal 15pt Arial;
+ 
+        }
+
+        header {
+            color: rgb(255, 252, 252);
+            text-align: center;
+            margin-bottom: 1%;
+            
+        }
+
+        section{
+            background-color: white;
+            border-radius: 10%;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 3px 4px 5px black;
+
+        }
+
+        footer{
+            color: white;
+            text-align: center;
+            font-style: italic;
+            margin-top: 2%;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CONTAGEM NÚMERICA</h1>
+    </header>
+    <section>
+        <div id="dados">
+            <p>Início:</p><input type="number" name="ContIni" id="ContIni"></p>
+            <p>Fim:</p><input type="number" name="ContFim" id="ContFim" ></p>
+            <p>Passo:</p><input type="number" name="ContPass" id="ContPass"></p>
+            <p><input type="button" value="Contar" onclick="contar()"></p> 
+        </div>
+        <div id="res"> 
+            Preparando a Contagem:
+        </div>
+    </section>
+    <footer>
+        <p>&copy;@GustavoGantois_</p>
+    </footer>
+</body>
+<script>
+    function contar() {
+        let ContIni = document.getElementById('ContIni')
+        let ContFim = document.getElementById('ContFim')
+        let ContPass = document.getElementById('ContPass')
+        let res = document.getElementById('res')
+        
+        if(ContIni.value.length == 0 || ContFim.value.length == 0 || ContPass.value.length == 0){ 
+            window.alert('[ERROR] Faltam dados!')
+            res.innerHTML = 'Impossivel contar!'
+        }else {
+            res.innerHTML = 'Contando: <br>' 
+            let i = Number(ContIni.value)
+            let f = Number(ContFim.value)
+            let p = Number(ContPass.value)
+            if(p <= 0) {
+                window.alert('Passo inválido! Considerando PASSO 1')
+                p = 1
+            }
+            if (i< f) {
+                //Contagem crescente
+                for(let c = i; c<= f; c+= p) {
+                    res.innerHTML += `${c} \u{1F449}`
+                }
+            } else {
+                //Contagem regressiva.
+                for (let c = i; c <= f; c-= p )
+                res.innerHTML += `${c} \u{1F449}`
+            }
+                res.innerHTML += `${c} \u{1F596}`
+            
+        }   
+    }
+</script>
+</html>
