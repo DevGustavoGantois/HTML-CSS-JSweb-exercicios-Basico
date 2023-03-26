@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Par ou Impar. Infinity School</title>
+    <style>
+        header{
+            color: white;
+            text-align: center;
+            font-family: 'Abril FatFace', cursive;
+            font-size: 2rem;
+            font-weight: lighter;
+            text-shadow: 5px 5px 10px black;
+        }
+        body {
+            background-color: rgb(52, 123, 228);
+            color: white;
+            font-family: 'Abril FatFace', cursive;
+        }
+        section{
+            color: black;
+            background-color: white;
+            text-align: center;
+            border-radius: 40%;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.377);
+        }
+
+        footer {
+            text-align: center;
+        }
+        div {
+            margin-top: 1%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Maior ou Menor</h1>
+    </header>
+    <section>
+        <div id="dados">
+            <p>Digite o 1 valor:</p><input type="number" name="n1" id="n1">
+            <p>Digite o 2 valor </p><input type="number" name="n2" id="n2">
+         <div>
+            </div>
+            <input type="button" value="Verficando Números" onclick="analisar()">
+        </div>
+        <div id="res">
+
+        </div>
+    </section>
+    <footer>
+        <p>&copy;@GustavoGantois_</p>
+        <p>&copy;InfinitySchool</p>
+    </footer>
+</body>
+<script>
+    function analisar(){
+        var n1 = window.document.getElementById('n1')
+        var n2 = window.document.getElementById('n2')
+        var res = window.document.getElementById('res')
+        let numero1 =  Number(n1.value)
+        let numero2 = Number(n2.value)
+        if(numero1 == 0 || numero2 == 0 ){
+            window.alert('[ERROR] Por favor, preencha a lacuna abaixo ')
+        } else if (n1 < n2) {
+            res.innerHTML = (`O valor 1 é = ${numero1} e é menor que o valor 2 =  ${numero2}`)
+        } else {
+            res.innerHTML = (`O primeiro valor 1 é = ${numero1} e é maior que o valor 2 = ${numero2} `)
+        }
+    }
+</script>
+</html>
