@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de 2 valores maior que o 3 valor.</title>
+</head>
+<body>
+    <style>
+        header{
+            color: rgb(0, 25, 245);
+            background-color:rgb(93, 143, 17) ;
+            text-align: center;
+        }
+        body{
+            color: rgb(4, 0, 255);
+            background-color: rgb(93, 143, 17);
+        }
+
+        section {
+            background-color: aliceblue;
+            border-radius: 3%;
+            font-style: italic;
+            box-shadow: 2px 2px 2px black;
+        }
+
+        img{
+            border-radius: 20%;
+            text-align: center;
+        }
+
+    </style>
+    <header>
+        <h1>2 valores maior que o 3 valor?</h1>
+    </header>
+    <section>
+        <div id="dados">
+           <li>
+            <br>
+            Digite o primeiro valor: <input type="number" name="valor1" id="valor1">
+           </li>
+           <li>
+            <br>
+            Digite o segundo valor: <input type="number" name="valor2" id="valor2">
+           </li>
+           <li>
+            <br>
+            Digite o terceiro valor: <input type="number" name="valor3" id="valor3">
+           </li>
+           <br>
+           <input type="button" value="somar" onclick="verificar()">
+            </div>
+            <div id="res">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; GustavoGantois_</p>
+        <center><img src="somar.jpg" alt="imagem referência a matemática" width="1000" height="700"></center>
+    </footer>
+</body>
+<script>
+    function verificar() {
+        var valor1 = window.document.getElementById('valor1')
+        var valor2 = window.document.getElementById('valor2')
+        var valor3 = window.document.getElementById('valor3')
+        var res = window.document.getElementById('res')
+        let v1 = Number(valor1.value)
+        let v2 = Number(valor2.value)
+        let v3 = Number(valor3.value)
+        if(v1+v2 > v3) {
+            res.innerHTML = `<b>O valor 1  = ${v1} e o valor 2 = ${v2} a soma deles é ${v1}+${v2} = ${v1 + v2} então a soma é maior que ${v3}</b>` 
+        } else if (v1+v2 < v3){
+            res.innerHTML = `<b>O valor 1=  ${v1} e o valor 2 = ${v2} a soma deles é ${v1}+${v2}=${v1 + v2} então a soma deles é menor que ${v3}</b>`
+        } else if(v1 == 0 || v2 == 0){
+            window.alert(`[ERROR] Você esqueceu de digitar um número. Digite-o.`)
+        } else if (v1 + v2 == v3){
+            res.innerHTML = `<b>O valor 1 = ${v1} e o valor 2 = ${v2} a soma deles é ${v1}+${v2}=${v3} então a soma deles é igual ao valor de ${v3}</b>`
+        }   Image.src = `image.png`
+
+        
+    }
+</script>
+</html>
