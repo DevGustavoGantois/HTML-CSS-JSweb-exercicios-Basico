@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 valores, soma e multiplicação</title>
+    <style>
+        header{
+            color: white;
+            text-align: center;
+            font-style: italic;
+        }
+        body{
+            color: rgba(0, 0, 0, 0.836);
+            text-align: center;
+            background-color: rgba(80, 80, 223, 0.836);
+            text-align: center;
+            font-style: italic;
+        }
+        section{
+            background: white;
+            border-radius: 40%;
+
+        }
+        footer{
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Soma e Multiplicação</h1>
+        <h3><li>Se os dois valores forem iguais some, se forem diferentes multiplique.</li></h3>
+    </header>
+    <section>
+        <div>
+            <p>Digite o primeiro valor:</p><input type="number" name="valor1" id="valor1">
+            <p>Digite o segundo valor:</p><input type="number" name="valor2" id="valor2">
+            <input type="button" value="Verificar" onclick="verificar()">
+            <div id="res">
+                Resposta:
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy;@GustavoGantois_</p>
+    </footer>
+</body>
+<script>
+    function verificar(){
+        var valor1 = window.document.getElementById('valor1')
+        var valor2 = window.document.getElementById('valor2')
+        var resposta = window.document.getElementById('res')
+        let v1 = Number(valor1.value)
+        let v2 = Number(valor2.value)
+        if(v1 = v2) {
+            res.innerHTML= `<b>O primeiro valor =${v1} e o segundo valor = ${v2} os valores são iguais. Então a soma desses valores ${v1}+${v2} = ${v1+v2}.</b>`
+        } else if (v1 != v2){
+            res.innerHTML = `<b>O primeiro valor = ${v1} e o segundo valor = ${v2} os valores são diferentes. Então a multiplicação desses valores ${v1}x${v2}=${v1*v2}.</b>`
+        } else if(v1==0 || v2== 0){
+            window.alert('[ERROR] Por favor, digite um número.')
+        }
+    }
+</script>
+</html>
