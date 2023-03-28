@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Se a variável for par some +5, se for impar some +8.</title>
+    <style>
+        header{
+            color: white;
+            font-style: italic;
+            text-align: center;
+        }
+        body{
+            background-color:rgb(79, 79, 224) ;
+            color: black;
+            font-style: italic;
+            text-align: center;
+        }
+        section{
+            background-color: wheat;
+            text-align: center;
+            border-radius: 30%;
+        }
+        footer{
+            color: white;
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Par e impar, Soma e Multiplicação</h1>
+    </header>
+    <section>
+        <div>
+            <h2>Digite um Número:</h2><input type="number" name="valor" id="valor"><input type="button" value="Analisar" onclick="analisar()">
+            <div id="res">
+                <h3>Resposta:</h3>
+                
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy;GustavoGantois_</p>
+    </footer>
+</body>
+<script>
+    function analisar(){
+        var valor = window.document.getElementById('valor')
+        var resposta = window.document.getElementById('res')
+        let v = Number(valor.value)
+        if(v % 2 == 0){
+            resposta.innerHTML = `<br>O valor ${v} e é <b>par</b>, e a soma de ${v}+5= ${v + 5}`
+        }else if (v % 2 == 1) {
+            resposta.innerHTML = `<br>O valor é ${v} e é <b>impar</b> e a soma de ${v}+8=${v+8} `
+        } 
+    }
+</script>
+</html>
