@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova Infinity School</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: rgb(89, 89, 221);
+            color: white;
+        }
+        h1 {
+            text-align: center;
+        }
+
+        div{
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            Prova Infinity School
+        </h1>
+    </header>
+    <div id="dados">
+        <p>Qual sua idade?</p><input type="number" name="idades" id="idades">
+        <p>Você é programador?</p><input type="text" name="Programadores" id="Programadores">
+        <p><input type="button" value="Analisar" onclick="Analisar()"></p>
+    </div>
+    <div id=" res" >
+        <p>Analisando os resultados...</p>
+    </div>
+    <footer>
+        <p>&copy;@GustavoGantois_</p>
+    </footer>
+</body>
+<script>
+            function Analisar() {
+            var idades = document.getElementById("idades")
+            var Programadores = document.getElementById("Programadores")
+            var resposta = document.getElementById("res")
+    
+            let i = Number(idades.value)
+    
+    
+            if(i === 21 &&  Programadores.value === 'Sim') {
+                resposta.innerText = `Sou Programador e tenho 21 anos.`
+            } else if (i > 21 && Programadores.value === 'Sim') {
+                resposta.innerText= `Sou Programador e tenho mais de 21 anos.`
+            } else if (i < 21 && Programadores.value === 'Sim') {
+                resposta.innerText = `Sou Programador e tenho menos de 21 anos.`
+            } else if (i > 21 && Programadores.value === 'Não') {
+                resposta.innerText = `Não sou Programador e tenho mais de 21 anos.`
+            } else if (i < 21 && Programadores.value ==='Não' ) {
+                resposta.innerText = `Não sou Programador e tenho menos de 21 anos.`
+            }   
+            
+        } 
+</script>
+</html>
