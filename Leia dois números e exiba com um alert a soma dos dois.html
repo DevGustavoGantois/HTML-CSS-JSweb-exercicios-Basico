@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leia dois números e exiba com um alert a soma dos dois</title>
+    <style>
+        header {
+            color: white;
+            text-align: center;
+        }
+
+        body {
+            background-color: rgba(87, 87, 223, 0.938);
+            color: white;
+            text-align: center;
+            margin-top: 5%;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Leia dois números e exiba com um alert a soma dos dois</h1>
+    </header>
+    <section>
+        <div>
+            <p>Digite o primeiro número:</p><input type="number" name="valor1" id="valor1">
+            <br>
+            <p>Digite o segundo número:</p><input type="number" name="valor2" id="valor2">
+            <br>
+            <p><input type="button" value="Analisar" onclick="Analisar()" ></p>
+            <div>
+                <p>Analisando os resultados</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy;@GustavoGantois_</p>
+    </footer>
+</body>
+<script>
+    function Analisar() {
+        var valor1 = document.getElementById("valor1");
+        var valor2 = document.getElementById("valor2");
+        
+        let v1 = Number(valor1.value)
+        let v2 = Number(valor2.value)
+
+        window.alert(`O valor1 é ${v1} e o valor2 é ${v2} e a soma de ${v1}+${v2}=${v1+v2}`)
+    }
+</script>
+</html>
