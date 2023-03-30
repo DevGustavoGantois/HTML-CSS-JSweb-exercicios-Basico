@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leia o raio de um círculo e calcule sua área</title>
+    <style>
+        body {
+            background-color: rgb(84, 84, 236);
+            color: white;
+            text-align: center;
+            font-style: italic;
+        }
+
+        header {
+            color: white;
+            text-align: center;
+            font-style: italic;
+        }
+
+        footer {
+            color: white;
+            text-align: center;
+            font-style: italic;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Leia o raio de um círculo e calcule sua área</h1>
+    </header>
+    <section>
+        <div id="dados">
+            <p>Qual o valor do raio do círculo:</p><input type="number" id="raio" name="raio">
+            <input type="button" value="Calcular a Área" onclick="Calculando()">
+
+            <div id="res">
+                <p>Analisando a Área...</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy;@GustavoGantois_</p>
+    </footer>
+</body>
+<script>
+    function Calculando() {
+        var raio = document.getElementById("raio");
+        var resposta = document.getElementById("res");
+
+        let r = Number(raio.value);
+
+        let area = Math.PI * r * r;
+        
+        resposta.innerHTML = `O valor do raio é de ${r} e o valor da área do círculo é de ${area.toFixed(2)}.`
+    }
+</script>
+</html>
