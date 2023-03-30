@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leia e calcule a área de um quadrado</title>
+    <style>
+        header {
+            text-align: center;
+            color: white;
+        }
+
+    body {
+        background-color: rgb(95, 95, 241);
+        text-align: center;
+        color: white;
+    }
+
+    footer {
+        text-align: center;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Área do Quadrado</h1>
+    </header>
+    <section>
+        <div>
+            <p>Digite o lado de um quadrado para saber a sua área:</p><input type="number" name="lado" id="lado">
+            <input type="button" value="Calcular" onclick="Calcular()">
+            <div id="res">
+                
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy;@GustavoGantois_</p>
+    </footer>
+</body>
+<script>
+    function Calcular() {
+        var lado = document.getElementById("lado")
+        var area = document.getElementById("res")
+
+        let L = Number(lado.value)
+
+        area.innerHTML = `O quadrado terá o lado ${L} e a Área desse quadrado será = ${L**2}`
+    }
+</script>
+</html>
