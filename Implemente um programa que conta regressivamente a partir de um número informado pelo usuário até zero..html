@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa que conta regressivamente a partir de um número informado pelo usuário até zero.</title>
+</head>
+<body>
+    <header>
+        <h1>Contagem regressiva a partir de um número, até zero</h1>
+    </header>
+    <div id="dados">
+        <p>Digite um número para contagem regressiva:</p><input type="number" id="numero" name="numero">
+        <p><input type="button" value="Contar" onclick="contar()"></p>
+        <div id="res">
+         <p>Preparando a Contagem.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy;@GustavoGantois_</p>
+    </footer>
+</body>
+<script>
+    function contar(){
+    var numeros = document.getElementById("numero")
+    var resposta = document.getElementById("res")
+
+    let n = Number(numeros.value)
+
+
+    if(n == 0) {
+        window.alert('[ERROR] Por favor, digite um número.')
+    } else {
+        resposta.inner = `Contando`
+
+        let n = Number(numeros.value)
+
+        
+
+        for(let c = n; c >= 0; c-= n) {
+            resposta.innerHTML += `${c}`;
+
+                
+        } 
+    }
+}
+
+
+
+//Não estou conseguindo acertar essa questão por mais besta que seja, se puderem quando entrarem nesse arquivo me ajudem...Obrigado
+// e uma ótima jornada a todos. 
+</script>
+</html>
