@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escreva um algoritmo que exiba todos os números pares de 0 ao número passado pelo usuário (utilize prompt).</title>
+    <style>
+        body {
+            text-align: center;
+            align-items: center;
+            font-style: italic;
+            color: white;
+            background-color: rgb(113, 113, 223);
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            font-style: italic;
+            color: white;
+        }
+
+        input {
+            font-size: 1rem;
+            size: 2px;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Escreva um algoritmo que exiba todos os números pares de 0 ao número passado pelo usuário utilizando o Prompt.</h1>
+    </header>
+    <div id="dados">
+        <p>Digite um número:</p><input type="number" name="valor" id="valor">
+        <div id="resposta">
+        <input type="button" value="Contar" onclick="contar()">
+
+        </div>
+    </div>
+    <footer>
+        <p>&copy;@GustavoGantois_</p>
+    </footer>
+</body>
+<script>
+    function contar() {
+        var valor = document.getElementById("valor")
+        var res = document.getElementById("resposta")
+        let v = Number(valor.value)
+        if (v === 0) {
+            window.alert(`[ERROR] Você esqueceu de digitar um número.`)
+
+        } else if (v % 2 == 0) {
+            for(var c = 0; c <= v; c++ ) {
+                window.prompt(`Contando -> ${c++}`)
+            }
+        } else if ( v % 2 == 1) {
+            for (var c = 0 ; c <= v; c++) {
+                window.prompt(`Contar -> ${c++}`)
+            }
+        }
+    }
+</script>
+</html>

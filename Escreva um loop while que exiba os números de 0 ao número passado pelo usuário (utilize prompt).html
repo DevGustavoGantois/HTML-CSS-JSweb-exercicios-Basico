@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop while que exiba os números de 0 ao número passado pelo usuário (utilize prompt).</title>
+    <style>
+        body  {
+            color: white;
+            background-color: rgb(101, 101, 199);
+            font-style: italic;
+            text-align: center;
+            
+        }
+
+        header {
+            color: white;
+            text-align: center;
+            font-style: italic;
+        }
+
+        footer {
+            color: #fff;
+            text-align: center;
+            font-style: italic;            
+        }
+
+        div {
+            margin: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>loop while que exiba os números de 0 ao número passado pelo usuário 
+            utilizando prompt.</h1>
+    </header>
+    <div id="dados">
+        <h3>Digite um Número:</h3><input type="number" name="número" id="número">
+        <div id="res">
+            <input type="button" value="Contar" onclick="Contar()">
+        </div>
+    </div>
+    <footer>
+        <p>&copy;@GustavoGantois_</p>
+    </footer>
+</body>
+<script>
+    function Contar() {
+        var numero1 = document.getElementById("número")
+        var resposta = document.getElementById("res")
+
+        let n = Number(numero1.value)
+        
+        if ( n === 0 ) {
+            window.alert( `[ERROR] Digite um número...` )
+
+        } else if ( n != -1) {
+            while (-1 <= n ) {
+                for (c = 0; c <= n ; c++) {
+                    resposta = window.prompt(`Contando ->${c}`)
+                    if (c = n ){
+                        break;
+                        }
+                    
+                       
+                    
+                
+                }
+            
+                }
+                
+            }
+            }
+</script>
+</html>
