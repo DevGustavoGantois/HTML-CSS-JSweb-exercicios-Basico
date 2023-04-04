@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada Númerica</title>
+    <style>
+        body {
+            background-color: rgb(102, 102, 231);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tabuada Númerica</h1>
+    </header>
+    <div id="dados">
+        <p>Digite um número:</p><input type="number" id="numero" class="numero"></p>
+        <div id="resposta">
+            <p><input type="button" value="Começar a Tabuada" onclick="Tabuada()"></p>
+            <select name="tabuada" id="tabuada" size="10">
+                <option>Digite um número acima</option>
+            </select>
+        </div>
+    </div>
+    <footer>&copy;@GustavoGantois_</footer>
+</body>
+<script>
+    function Tabuada() {
+        var num = document.getElementById("numero")
+        var res = document.getElementById("resposta")
+        var tabuada = ''
+
+        let n = Number(num.value)
+
+
+        if(n === 0 ) {
+            window.alert("[ERROR] Por favor digite um número...")
+        } else {
+            for (var c = 1; c <= 10 ; c++) {
+            tabuada += n + "x" +c+ "=" +
+            n * c + "<br/>";
+             res.innerHTML = tabuada
+            }
+        }
+
+    }
+</script>
+</html>
