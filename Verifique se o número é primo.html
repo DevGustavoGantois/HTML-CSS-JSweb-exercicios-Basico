@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifique se o número é primo</title>
+</head>
+<body>
+    <header>
+        <h1>Verificando se o número é primo.</h1>
+    </header>
+    <div id="dados">
+        <p>Digite um número:<input type="number" id="numero" class="numero"></p>
+        <div id="resposta">
+            <input type="button" value="Verificar se o número é primo" onclick="Verificar()">
+        </div>
+    </div>
+</body>
+<script>
+    function Verificar  () {
+        var num = document.getElementById("numero")
+        var res = document.getElementById("resposta")
+
+        let n = Number(num.value)
+        let divisor = 0;
+
+        for(var count = 0; count <= n; count++) {
+    }  if (n % count == 0) {
+        divisor ++
+
+    } if (divisor == 2) {
+        res.innerHTML = `${count} é primo.`
+    } else {
+        res.innerHTML = `${count} não é primo.`
+    }
+
+    }
+</script>
+</html>
