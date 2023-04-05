@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Programa que conta regressivamente a partir de um
+        número informado pelo usuário até zero.</title>
+</head>
+<body>
+    <header>
+        <h1>Programa que conta regressivamente a partir de um número informado pelo usuário.</h1>
+    </header>
+    <div id="dados">
+        <p>Digite um número:</p><input type="number" id="numero" class="numero">
+        <div id="resposta">
+        <input type="button" value="contar" onclick="contar()">
+
+        </div>
+    </div>
+</body>
+<script>
+    function contar() {
+     var num = document.getElementById("numero");
+     var resp = document.getElementById("resposta");
+
+     let n = Number(num.value);
+
+    for( var i = n; i > n ; n--) {
+        resp.innerHTML = `${i--}`
+        break;
+    }
+    } 
+
+
+// Quem tiver a resposta dessa questão e puder me corrigir mostrar o que eu estou errando serei mto grato, já tem essa quesão no meu repositorio
+// estou tentando novamente e não estou conseguindo sei que é algo besta que devo ter errado, mas faz parte do processo.
+</script>
+</html>
