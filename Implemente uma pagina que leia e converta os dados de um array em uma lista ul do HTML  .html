@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-size: large;
+            font-style: italic;
+            text-align: center;
+            color: white;
+            background-color:rgb(104, 104, 235);
+        }
+
+        header {
+            text-align: center;
+            color: white;
+        }
+    </style>
+    <title>Implemente uma Página que leia e converta os dados de um arrray em uma lista ul do HTML</title>
+</head>
+<body>
+    <header>
+        <h1>Conversor de Dados</h1>
+    </header>
+    <div>
+        <input type="text" class="dados" placeholder="digite um texto">
+        <input id="btn" onclick="click" type="submit" value="enviar">
+        <select class="tabela">
+            <option>dados cadastrados</option>
+        </select>
+        <div>
+        </div>
+    </div>
+    <script>
+        const lista = []
+
+        const aplication = () => {
+            const btn = document.querySelector("#btn")
+
+            btn.addEventListener("click", () => {
+                const dados = document.querySelector(".dados").value
+                const tabela = document.querySelector(".tabela")
+                lista.push(dados)
+
+                const item = document.createElement("option")
+                lista.forEach(element => {
+                    item.text= element
+                })
+                tabela.appendChild(item)
+            })
+        }
+        aplication()
+    </script>
+</body>
+</html>
