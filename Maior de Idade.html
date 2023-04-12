@@ -1,0 +1,62 @@
+DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova Infinity School</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: rgb(89, 89, 221);
+            color: white;
+        }
+        h1 {
+            text-align: center;
+        }
+
+        div{
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            Prova Infinity School
+        </h1>
+    </header>
+    <div id="dados">
+        <p>Qual sua idade:</p><input type="number" name="idades" id="idades">
+        <p><input type="button" value="Analisar" onclick="Analisar()"></p>
+    </div>
+    <div id=" res" >
+        <p>Analisando os resultados...</p>
+    </div>
+    <footer>
+        <p>&copy;@GustavoGantois_</p>
+    </footer>
+</body>
+<script>
+            function Analisar() {
+            var idades = document.getElementById("idades")
+            var resposta = document.getElementById("res")
+    
+            let i = Number(idades.value)
+    
+    
+            if(i < 18) {
+                resposta.innerText = `Você é menor de idade.`
+            } else if (i = 18) {
+                resposta.innerText= `Você acabou de atingir a maior idade.`
+            } else if (i > 18) {
+                resposta.innerText = `Você é maior de idade.`
+            }         
+        } 
+</script>
+</html>
