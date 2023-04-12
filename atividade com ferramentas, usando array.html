@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie um loop para entrada de dados de diversos nomes de ferramentas, que devem ser armazenadas em array. O loop só deve encerrar se o usuário informar uma ferramenta chama "fim". Exiba o nome das ferramentas.</title>
+</head>
+<body>
+    <header>
+        <h1>Crie um loop para entrada de dados de diversos nomes de ferramentas, que devem ser armazenadas em array. O loop só deve encerrar se o usuário informar uma ferramenta chama "fim". Exiba o nome das ferramentas</h1>
+    </header>
+    <section>
+        <div>
+            <p>Digite várias ferramentas:</p>
+            <p><input type="text" id="fferramentas" class="fferramentas" placeholder="Digite alguma ferramenta"></p>
+            <button id="btn" onclick="aplication()">Enviar</button>
+            <div id="res">
+                <p><select name="caixa" id="caixa">
+                    <option>Selecione uma ferramenta.</option>
+                </select></p>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    const lista = []
+
+    const aplication = () => {
+        const ferramentas = document.querySelector("#fferramentas").value
+        const caixa = document.querySelector("#caixa")
+        
+        if (ferramentas !== 'fim') {
+            lista.push(ferramentas)
+
+            caixa.innerHTML = ''
+            lista.forEach(element => {
+                const item = document.createElement("option")
+                item.text = element
+                caixa.appendChild(item)
+            })
+        } else {
+            window.alert("FIM DO PROGRAMA.")
+        }
+    }
+</script>
+</html>
+
+
+
+
